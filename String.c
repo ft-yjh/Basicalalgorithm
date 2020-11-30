@@ -159,11 +159,42 @@ void test04()
     print_third(n);
 }
 
+void print_sequence(int n)
+{
+    int i = 0;
+    int k = 0;
+    for(i=1; i<=n/2; i++)
+    {
+        int sum = 0;
+        int tmp = i;
+        while(sum < n)
+        {
+            sum += tmp;
+            if(sum == n)
+            {
+                for(k=i; k<=tmp; k++)
+                {
+                    printf("%d", k);
+                }
+                printf("\n");
+            }
+            tmp++;
+        }
+    }
+}
+
+void test05()
+{
+	int n = 15;
+    print_sequence(n);
+ } 
+
 int main()
 {
 	//reverse_test01();
 	//test02();
 	//test03();
-	test04();
+	//test04();
+	test05();
 	return 0;
  } 
